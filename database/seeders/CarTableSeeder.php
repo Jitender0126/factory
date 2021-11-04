@@ -30,5 +30,7 @@ class CarTableSeeder extends Seeder
         $vw->displacement=2.2;
         $vw->save();
 
+
+        $car= Car::factory()->count(10)->create();
     }
 }

@@ -14,7 +14,11 @@ class CarFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'make'=>$this->faker->company(),
+            'model'=>$this->faker->word(),
+            'year'=>$this->faker->year($max = 'now'),
+            'mileage'=>$this->faker->numberBetween($min = 1000, $max = 500000),
+            'displacement'=>$this->faker->randomFloat($nbMaxDecimals = 1, $min = 01, $max = 9)
         ];
     }
 }
